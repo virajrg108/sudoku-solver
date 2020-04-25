@@ -3,7 +3,6 @@ var grid = new Array(9);
 for (var k = 0; k < grid.length; k++) { 
     grid[k] = new Array(9); 
 }
-console.log(grid)
 function loaded() {
     var el = document.getElementById("grid");
     el.innerHTML = '<input class="square"/>';
@@ -29,7 +28,6 @@ function loadValues() {
                 grid[i][j] = 0;
         }
     }
-    console.log(grid)
 }
 
 function solve() {
@@ -44,7 +42,6 @@ function solveSudoku(grid, row, col) {
     row = cell[0];
     col = cell[1];
     if (row == -1) {
-        console.log("solved");
         return true;
     }
 
